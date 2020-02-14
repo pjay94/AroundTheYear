@@ -254,7 +254,8 @@ public class MainActivity extends AppCompatActivity {
     private void openCamera(){
         CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
         try{
-            cameraId = manager.getCameraIdList()[0];
+            cameraId = manager.getCameraIdList()[1];
+            System.out.println("length " + manager.getCameraIdList().length);
             CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraId);
             StreamConfigurationMap map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
             assert map != null;
@@ -270,7 +271,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (CameraAccessException e){
             e.printStackTrace();
         }
-
     }
 
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {

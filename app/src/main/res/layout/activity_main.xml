@@ -11,6 +11,8 @@
         android:layout_height="match_parent"
         android:layout_above="@id/btnCapture"/>
 
+    <include layout="@layout/content_main"/>
+
     <Button
         android:id="@+id/btnCapture"
         android:layout_width="wrap_content"
@@ -19,24 +21,12 @@
         android:layout_alignParentBottom="true"
         android:text="CYK"/>
 
-    <android.view.SurfaceView
-        android:id="@+id/surfaceTop"
-        android:layout_width="fill_parent"
-        android:layout_height="50px"
-        android:outlineAmbientShadowColor="@color/cardview_light_background"/>
-
-    <android.view.SurfaceView
-        android:id="@+id/surfaceBottom"
-        android:layout_alignParentBottom="true"
-        android:layout_width="fill_parent"
-        android:layout_height="50px"
-        android:outlineAmbientShadowColor="@color/cardview_light_background"/>
-
-<!--    <ImageView-->
-<!--        android:id = "@+id/header"-->
-<!--        android:layout_width = "wrap_content"-->
-<!--        android:layout_height = "wrap_content" />-->
-
+    <Button
+        android:id="@+id/changeCameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="CAM" />
 
 
 </RelativeLayout>
